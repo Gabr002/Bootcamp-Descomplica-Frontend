@@ -1,5 +1,9 @@
+import { Card } from "../../components/Card/Card"
+
 export const HomePage = () => {
     return(
-        <h1>Home Page!</h1>
+        <div className='HomePage'>
+            <Card />     
+        </div>
     )
 }
