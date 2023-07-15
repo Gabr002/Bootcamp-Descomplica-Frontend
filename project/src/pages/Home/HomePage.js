@@ -11,7 +11,6 @@ export const HomePage = () => {
                 <Col xs={12} md={3}><Card /></Col>
                 <Col xs={12} md={3}><Card /></Col>
                 <Col xs={12} md={3}><Card /></Col>
-                
             </Row>
         </Container>
     )
