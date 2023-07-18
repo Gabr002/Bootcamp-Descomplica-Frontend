@@ -8,9 +8,10 @@ import { ModalSavePin } from '../../containers/ModalSavePin/ModalSavPin'
 import { ModalCreateFolder } from '../../containers/ModalCreateFolder/ModalCreateFolder'
 
 
-const Teste = () => {
-    return(
-        <h4>Hello, portal!</h4>
+const Teste = ({ label }) => {
+    return ReactDOM.createPortal(
+        <h4>{label}</h4>,
+        document.body   
     )
 }
 
@@ -18,7 +19,7 @@ const Teste = () => {
 export const HomePage = () => {
     return(
         <div>
-            <Teste/>
+            <Teste label="Hello, World!" />
             <ModalCreateFolder open={false}/>
             <Container fluid>
             <Row>
