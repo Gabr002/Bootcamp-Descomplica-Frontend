@@ -11,33 +11,33 @@ export const ModalSavePin = (open) => {
         open={open} 
         controls={[
             {
-                label: 'Criar pasta',
+                label: 'Create Folder',
                 variant: 'secondary',
                 loading: false,
-                loadingLabel: 'Criando',
+                loadingLabel: 'Creating',
                 onclick: () => {
-                    console.log('clicou em criar pasta');
+                    console.log('Click in Create Folder');
                 }
             }
         ]}>
-            <h3>Opa, estou aqui</h3>
+            <h3>Hello, is live</h3>
             <ListGroup variant="flush">
                 <ListGroup.Item>
                     <Row>
-                        <Col xs={8}>Matemática</Col>
-                        <Col xs={4}  className="text-end"><Button label="Salvar" loadingLabel="Salvando" /></Col>
+                        <Col xs={8}>Math</Col>
+                        <Col xs={4}  className="text-end"><Button label="toSave" loadingLabel="saving" /></Col>
                     </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                     <Row>
                         <Col xs={8}>Matemática</Col>
-                        <Col xs={4}  className="text-end"><Button label="Salvar" loadingLabel="Salvando" /></Col>
+                        <Col xs={4}  className="text-end"><Button label="toSave" loadingLabel="saving" /></Col>
                     </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                     <Row>
-                        <Col xs={8}>Matemática</Col>
-                        <Col xs={4}  className="text-end"><Button label="Salvar" loadingLabel="Salvando" /></Col>
+                        <Col xs={8}>Math</Col>
+                        <Col xs={4}  className="text-end"><Button label="toSave" loadingLabel="saving" /></Col>
                     </Row>
                 </ListGroup.Item>
             </ListGroup>

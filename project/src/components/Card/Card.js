@@ -11,7 +11,6 @@ export const Card = ({ image, title, total }) => {
           Profile <Badge bg="secondary">{total}</Badge>
           <span className="visually-hidden">unread messages</span>
         </Button>
-        <CardBS.Text>Last updated 3 mins ago</CardBS.Text>
       </CardBS.ImgOverlay>
       <CardBS.Body>
         <CardBS.Title>{title}</CardBS.Title>

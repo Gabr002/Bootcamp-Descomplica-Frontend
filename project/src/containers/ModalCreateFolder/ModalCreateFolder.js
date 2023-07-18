@@ -12,7 +12,7 @@ export const ModalCreateFolder = ({ open }) => {
 
     const handleChange = (e) => {
         setFolderName(e.target.value);
-        console.log('Fez o submit', setFolderName);
+        console.log('Did the submit', setFolderName);
     }
 
     return(
@@ -22,19 +22,19 @@ export const ModalCreateFolder = ({ open }) => {
             type='submit'
             controls={[
                 {
-                    label: 'Criar e salvar',
-                    loadingLabel: 'Salvando',
+                    label: 'Create and to save',
+                    loadingLabel: 'Saving',
                     variant: 'secondary',
                     loading: false,
                     type: 'submit',
-                    form: 'form-criar-pasta'
+                    form: 'form-Create-Folder'
                 }
             ]}
         >
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Nome da Pasta</Form.Label>
-                    <Form.Control type="text" placeholder="Ex: Matematica" value={folderName} onchange={handleChange} />
+                    <Form.Label>Name the folder</Form.Label>
+                    <Form.Control type="text" placeholder="Ex: Math" value={folderName} onchange={handleChange} />
                 </Form.Group>
             </Form>
         </Modal>
