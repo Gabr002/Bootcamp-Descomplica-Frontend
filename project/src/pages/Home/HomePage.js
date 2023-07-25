@@ -12,19 +12,19 @@ import { Modal } from '../../components/Modal/Modal'
 export const HomePage = () => {
     return(
         <div>
-            <ModalSavePin open={false}/>
-            <ModalCreateFolder open={true}/>
-            <Notification
+           {/*  <ModalSavePin open={false}/>
+            <ModalCreateFolder open={false}/> */}
+            {/* <Notification
                 message='successfully Create'
                 onClose={() =>{
                     console.log('Clicou em fechar');
                 }}
-                />
+                /> */}
             <Container fluid>
-            <Row>
-                <Col xs={12} md={2}><Card title="Matemática" image="https://picsum.photos/200/300?53" total={0}/></Col>
-                <Col xs={12} md={2}><Card title="Trigonometry" image="https://picsum.photos/200/300?53" total={1}/></Col>
-            </Row>
+                <Row>
+                    <Col xs={12} md={2}><Card title="Matemática" image="https://picsum.photos/200/300?53" total={0}/></Col>
+                    <Col xs={12} md={2}><Card title="Trigonometry" image="https://picsum.photos/200/300?53" total={1}/></Col>
+                </Row>
             </Container>
         </div>
     )
