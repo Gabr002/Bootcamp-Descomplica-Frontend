@@ -6,16 +6,27 @@ import {
 import { HomePage } from './pages/Home/HomePage';
 import { MinhasPastasPage } from "./pages/MinhasPastas/MinhasPastasPage";
 import { HeaderPartial } from './Partials/HeaderPartial/HeaderPartial'
+import { saveFolder, savePinFolder } from './services/pinService'
+import { AppContext } from './store/AppContext';
+
+const startState = {
+  activePinId: null,
+  mode: null,
+  folders: [],
+  type: null,
+}
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <HeaderPartial/>       
-        <Routes>
-          <Route path="/" element={<HomePage />}/>
-          <Route path="/minhas-pastas" element={<MinhasPastasPage />}/>
-        </Routes>
+        <AppContext initialState={startState}>
+          <HeaderPartial/>       
+          <Routes>
+            <Route path="/" element={<HomePage />}/>
+            <Route path="/minhas-pastas" element={<MinhasPastasPage />}/>
+          </Routes>
+        </AppContext>
       </div>
     </BrowserRouter>
   );
