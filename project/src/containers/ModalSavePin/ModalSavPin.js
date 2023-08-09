@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import { Modal } from "../../components/Modal/Modal";
 import { Button } from '../../components/Button/Button';
 
-export const ModalSavePin = (open) => {
+export const ModalSavePin = ({open}) => {
     return(
         <Modal 
         title="Salvar pin" 
