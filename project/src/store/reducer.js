@@ -2,7 +2,7 @@ export function Reducer(state, action){
     console.log('Clicou34');
     switch(action.type){
         case 'open modal save pin':
-            return{
+            return{ // this is new Commit.
                 ...state,
                 mode: 'savePin'
             }
