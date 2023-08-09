@@ -20,7 +20,6 @@ export const ModalSavePin = (open) => {
                 }
             }
         ]}>
-            <h3>Hello, is live</h3>
             <ListGroup variant="flush">
                 <ListGroup.Item>
                     <Row>

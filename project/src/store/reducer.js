@@ -1,16 +1,10 @@
-export function reducer(state, action){
+export function Reducer(state, action){
+    console.log('Clicou34');
     switch(action.type){
-        case 'OPEN_MODAL':
+        case 'open modal save pin':
             return{
                 ...state,
-            }
-        case 'SAVE_PIN':
-            return{
-                ...state,
-            }
-        case 'CLOSE_PIN':
-            return{
-                ...state,
+                mode: 'savePin'
             }
         default:
             return state;
