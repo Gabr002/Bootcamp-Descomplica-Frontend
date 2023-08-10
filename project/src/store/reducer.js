@@ -1,10 +1,21 @@
+import * as types from  '../store/actions'
+
 export function Reducer(state, action){
-    console.log('Clicou34');
-    switch(action.type){
-        case 'open modal save pin':
-            return{ // this is new Commit.
+    switch(action.types){
+        case types.openModalSavePinAction :
+            return{ 
                 ...state,
                 mode: 'savePin'
+            }
+        case types.closeModalAction :
+            return{
+                ...state,
+                mode: null
+            }
+        case types.fetchFolders:
+            return{
+                ...state,
+                folders: 
             }
         default:
             return state;

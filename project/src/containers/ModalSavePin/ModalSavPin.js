@@ -3,12 +3,24 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Modal } from "../../components/Modal/Modal";
 import { Button } from '../../components/Button/Button';
+import { UseAppContext } from '../../store/AppContext'
+import { closeModalAction } from '../../store/actions';
 
 export const ModalSavePin = ({open}) => {
+    const { dispatch } = UseAppContext();
+
+    const handleClose = () => {
+        console.log('Close');
+        dispatch({
+            type: 'Close Modals'
+        })
+    }
+
     return(
         <Modal 
         title="Salvar pin" 
         open={open} 
+        onHide={handleClose}
         controls={[
             {
                 label: 'Create Folder',
