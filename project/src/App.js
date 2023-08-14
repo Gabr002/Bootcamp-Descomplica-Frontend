@@ -14,7 +14,7 @@ const startState = {
   mode: null,
   folders: [],
   type: null,
-}
+};
 
 function App() {
   return (

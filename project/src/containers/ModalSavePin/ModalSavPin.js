@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -5,16 +6,19 @@ import { Modal } from "../../components/Modal/Modal";
 import { Button } from '../../components/Button/Button';
 import { UseAppContext } from '../../store/AppContext'
 import { closeModalAction } from '../../store/actions';
+import { fetchFoldersAction } from '../../store/actions';
 
 export const ModalSavePin = ({open}) => {
-    const { dispatch } = UseAppContext();
+    const { state, dispatch } = UseAppContext();
 
     const handleClose = () => {
-        console.log('Close');
-        dispatch({
-            type: 'Close Modals'
-        })
+        console.log('Close!!');
+        dispatch(closeModalAction());
     }
+
+    useEffect(() => {
+        fetchFoldersAction(dispatch);
+    }, [])
 
     return(
         <Modal 
@@ -33,24 +37,14 @@ export const ModalSavePin = ({open}) => {
             }
         ]}>
             <ListGroup variant="flush">
-                <ListGroup.Item>
+                {state.folders.map((folder, folderIndex) => (
+                <ListGroup.Item key={folderIndex}>
                     <Row>
                         <Col xs={8}>Math</Col>
                         <Col xs={4}  className="text-end"><Button label="toSave" loadingLabel="saving" /></Col>
                     </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
-                    <Row>
-                        <Col xs={8}>Matemática</Col>
-                        <Col xs={4}  className="text-end"><Button label="toSave" loadingLabel="saving" /></Col>
-                    </Row>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                    <Row>
-                        <Col xs={8}>Math</Col>
-                        <Col xs={4}  className="text-end"><Button label="toSave" loadingLabel="saving" /></Col>
-                    </Row>
-                </ListGroup.Item>
+                ))}
             </ListGroup>
         </Modal>
     )

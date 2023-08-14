@@ -1,21 +1,25 @@
-import * as types from  '../store/actions'
+import * as types from  '../store/types'
 
 export function Reducer(state, action){
     switch(action.types){
-        case types.openModalSavePinAction :
+        case types.openModalSavePinType :
             return{ 
                 ...state,
                 mode: 'savePin'
             }
-        case types.closeModalAction :
+        case types.closeModalsType :
             return{
                 ...state,
                 mode: null
             }
-        case types.fetchFolders:
+        case types.fetchFoldersInitType:
+            return {
+                ...state,
+            }
+        case types.fetchFoldersSucessType:
             return{
                 ...state,
-                folders: 
+                folders: action.payload
             }
         default:
             return state;
